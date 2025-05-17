@@ -260,16 +260,17 @@
 
 
 
-<!-- Modal -->
+<!-- MODAL -->
 <div class="modal fade" id="cotizacionModal" tabindex="-1" role="dialog" aria-labelledby="cotizacionModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content" style="border-radius: 20px; background-color: #fdd100;">
+    <div class="modal-content" style="background: rgba(0, 0, 0, 0.93); color: white; border-radius: 18px; border: 2px solid #f59e0b;">
       <div class="modal-header border-0">
-        <h5 class="modal-title font-weight-bold mx-auto" id="cotizacionModalLabel">SOLICITA COTIZACIÓN</h5>
-        <button type="button" class="close position-absolute" style="right: 15px;" data-dismiss="modal" aria-label="Cerrar">
+        <h5 class="modal-title mx-auto font-weight-bold text-warning" id="cotizacionModalLabel">SOLICITA TU COTIZACIÓN</h5>
+        <button type="button" class="close text-white position-absolute" style="right: 15px;" data-dismiss="modal" aria-label="Cerrar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
       <form id="formCotizacion">
         <div class="modal-body px-4">
           <div class="form-group">
@@ -301,10 +302,11 @@
             <input type="text" class="form-control rounded-pill" placeholder="¿Qué tipo de mercancía vas a transportar?" required>
           </div>
 
-          <p class="font-weight-bold mt-4">EL SERVICIO ESPECIALIZADO QUE REQUIERES ES DE:</p>
+          <p class="font-weight-bold mt-4 text-warning">¿Qué servicio necesitas?</p>
+
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="serv1">
-            <label class="form-check-label" for="serv1">Flete Carga Consolidada LTL (1 - 14 pallets, 500 - 600 kg...)</label>
+            <label class="form-check-label" for="serv1">Flete Carga Consolidada LTL (1 - 14 pallets)</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="serv2">
@@ -312,55 +314,29 @@
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="serv3">
-            <label class="form-check-label" for="serv3">Fletes Terrestres Contenedores FCL (Completo)</label>
+            <label class="form-check-label" for="serv3">Fletes Terrestres Contenedores FCL</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="serv4">
-            <label class="form-check-label" for="serv4">Fletes Carga Sobredimensionada (Equipo Especial)</label>
+            <label class="form-check-label" for="serv4">Fletes Carga Sobredimensionada</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="serv5">
             <label class="form-check-label" for="serv5">Almacenaje y Distribución</label>
           </div>
-          <div class="form-check mb-3">
+          <div class="form-check mb-4">
             <input class="form-check-input" type="checkbox" id="serv6">
             <label class="form-check-label" for="serv6">Transporte de Vehículos en Nodrizas</label>
           </div>
 
-          <button type="button" class="btn btn-danger btn-block mt-3 rounded-pill" onclick="enviarCotizacionWhatsApp()">
-            <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+          <button type="button" class="btn btn-warning btn-block rounded-pill font-weight-bold" onclick="enviarCotizacionWhatsApp()">
+            Enviar por WhatsApp
           </button>
         </div>
       </form>
     </div>
   </div>
 </div>
-
-<!-- Script para enviar por WhatsApp -->
-<script>
-  function enviarCotizacionWhatsApp() {
-    const nombre = document.querySelector('#formCotizacion input[placeholder="Nombre Completo"]').value;
-    const celular = document.querySelector('#formCotizacion input[placeholder="Celular"]').value;
-    const correo = document.querySelector('#formCotizacion input[placeholder="correo electrónico"]').value;
-    const empresa = document.querySelector('#formCotizacion input[placeholder="Empresa"]').value;
-    const origen = document.querySelector('#formCotizacion input[placeholder="Ciudad de Origen"]').value;
-    const destino = document.querySelector('#formCotizacion input[placeholder="Ciudad de Destino"]').value;
-    const mercancia = document.querySelector('#formCotizacion input[placeholder="¿Qué tipo de mercancía vas a transportar?"]').value;
-
-    let servicios = [];
-    document.querySelectorAll('#formCotizacion .form-check-input').forEach(chk => {
-      if (chk.checked) {
-        servicios.push(chk.nextElementSibling.textContent.trim());
-      }
-    });
-
-    const mensaje = `👋 Hola, quiero una cotización:\n\n👤 *Nombre:* ${nombre}\n📞 *Celular:* ${celular}\n📧 *Correo:* ${correo}\n🏢 *Empresa:* ${empresa}\n🛫 *Origen:* ${origen}\n🛬 *Destino:* ${destino}\n📦 *Mercancía:* ${mercancia}\n📋 *Servicios requeridos:*\n- ${servicios.join('\n- ')}`;
-
-    const telefono = "523141631209"; // Reemplaza por tu número de WhatsApp
-    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, '_blank');
-  }
-</script>
 
     <!-- Quote Request Start -->
     <div class="container my-4" style="max-width: 600px;">
@@ -406,6 +382,42 @@
 
 
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+  function enviarCotizacionWhatsApp() {
+    const nombre = document.querySelector('#formCotizacion input[placeholder="Nombre Completo"]').value;
+    const celular = document.querySelector('#formCotizacion input[placeholder="Celular"]').value;
+    const correo = document.querySelector('#formCotizacion input[placeholder="correo electrónico"]').value;
+    const empresa = document.querySelector('#formCotizacion input[placeholder="Empresa"]').value;
+    const origen = document.querySelector('#formCotizacion input[placeholder="Ciudad de Origen"]').value;
+    const destino = document.querySelector('#formCotizacion input[placeholder="Ciudad de Destino"]').value;
+    const mercancia = document.querySelector('#formCotizacion input[placeholder="¿Qué tipo de mercancía vas a transportar?"]').value;
+
+    let servicios = [];
+    document.querySelectorAll('#formCotizacion .form-check-input').forEach(chk => {
+      if (chk.checked) {
+        servicios.push(chk.nextElementSibling.textContent.trim());
+      }
+    });
+
+    const mensaje = 
+`Hola, quiero una cotización:
+
+Nombre: ${nombre}
+Celular: ${celular}
+Correo: ${correo}
+Empresa: ${empresa}
+Origen: ${origen}
+Destino: ${destino}
+Mercancía: ${mercancia}
+Servicios:
+- ${servicios.join('\n- ')}`;
+
+    const telefono = "5213141047902"; // Número WhatsApp con lada
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  }
+</script>
 
     <script>
         ScrollReveal().reveal(".card", {
