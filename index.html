@@ -263,7 +263,7 @@
 <!-- MODAL -->
 <div class="modal fade" id="cotizacionModal" tabindex="-1" role="dialog" aria-labelledby="cotizacionModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content" style="background: rgba(0, 0, 0, 0.93); color: white; border-radius: 18px; border: 2px solid #f59e0b;">
+    <div class="modal-content">
       <div class="modal-header border-0">
         <h5 class="modal-title mx-auto font-weight-bold text-warning" id="cotizacionModalLabel">SOLICITA TU COTIZACIÓN</h5>
         <button type="button" class="close text-white position-absolute" style="right: 15px;" data-dismiss="modal" aria-label="Cerrar">
@@ -306,28 +306,13 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="serv1">
-            <label class="form-check-label" for="serv1">Flete Carga Consolidada LTL (1 - 14 pallets)</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="serv2">
-            <label class="form-check-label" for="serv2">Flete Carga Consolidada LTL (Intra Mex)</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="serv3">
-            <label class="form-check-label" for="serv3">Fletes Terrestres Contenedores FCL</label>
+            <label class="form-check-label" for="serv1">IMO 3,4,5</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="serv4">
             <label class="form-check-label" for="serv4">Fletes Carga Sobredimensionada</label>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="serv5">
-            <label class="form-check-label" for="serv5">Almacenaje y Distribución</label>
-          </div>
-          <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" id="serv6">
-            <label class="form-check-label" for="serv6">Transporte de Vehículos en Nodrizas</label>
-          </div>
+
 
           <button type="button" class="btn btn-warning btn-block rounded-pill font-weight-bold" onclick="enviarCotizacionWhatsApp()">
             Enviar por WhatsApp
@@ -413,7 +398,7 @@ Mercancía: ${mercancia}
 Servicios:
 - ${servicios.join('\n- ')}`;
 
-    const telefono = "5213141047902"; // Número WhatsApp con lada
+    const telefono = "523141631209"; // Número WhatsApp con lada
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
   }
