@@ -293,15 +293,34 @@
             <label>Ciudad de Destino *</label>
             <input type="text" class="form-control rounded-pill" placeholder="Ciudad de Destino" required>
           </div>
-          <div class="form-group">
-            <label>Mercancía a transportar *</label>
-            <input type="text" class="form-control rounded-pill" placeholder="¿Qué tipo de mercancía vas a transportar?" required>
-          </div>
 
+
+             <p class="font-weight-bold mt-4 text-dark">¿Tipo de carga?</p>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="serv3">
+            <label class="form-check-label" for="serv3">General</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="serv4">
+            <label class="form-check-label" for="serv4">Refrigerada</label>
+          </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="serv4">
+            <label class="form-check-label" for="serv4">IMO (Peligrosa)</label>
+          </div>
+      <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="serv4">
+            <label class="form-check-label" for="serv4">Dimensionado</label>
+          </div>
 
           <button type="button" class="btn btn-warning btn-block rounded-pill font-weight-bold" onclick="enviarCotizacionWhatsApp()">
             Enviar por WhatsApp
           </button>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+             Cerrar
+            </button>
         </div>
       </form>
     </div>
@@ -374,16 +393,21 @@
         );
 
 
-         function enviarCotizacionWhatsApp() {
+<script>
+  function enviarCotizacionWhatsApp() {
     const nombre = document.querySelector('#formCotizacion input[placeholder="Nombre Completo"]').value;
     const celular = document.querySelector('#formCotizacion input[placeholder="Celular"]').value;
     const correo = document.querySelector('#formCotizacion input[placeholder="correo electrónico"]').value;
     const empresa = document.querySelector('#formCotizacion input[placeholder="Empresa"]').value;
     const origen = document.querySelector('#formCotizacion input[placeholder="Ciudad de Origen"]').value;
     const destino = document.querySelector('#formCotizacion input[placeholder="Ciudad de Destino"]').value;
-    const mercancia = document.querySelector('#formCotizacion input[placeholder="¿Qué tipo de mercancía vas a transportar?"]').value;
 
- 
+
+    let servicios = [];
+    document.querySelectorAll('#formCotizacion .form-check-input').forEach(chk => {
+      if (chk.checked) {
+        servicios.push(chk.nextElementSibling.textContent.trim());
+      }
     });
 
     const mensaje = 
@@ -395,13 +419,15 @@ Correo: ${correo}
 Empresa: ${empresa}
 Origen: ${origen}
 Destino: ${destino}
-Mercancía: ${mercancia}
+Servicios:
+- ${servicios.join('\n- ')}`;
 
-
-    const telefono = "523141631209"; // Número WhatsApp con lada
+    const telefono = "523141631209"; // Cambia a tu número real
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
   }
+</script>
+
     </script>
 
     <!-- JavaScript Libraries -->
