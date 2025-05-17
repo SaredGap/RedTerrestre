@@ -89,6 +89,10 @@
                     <a href="index.html" class="nav-item nav-link active">Inicio</a>
                     <a href="about.html" class="nav-item nav-link">Nosotros</a>
                     <a href="service.html" class="nav-item nav-link">Servicios</a>
+                        <!-- Botón para abrir el modal -->
+<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#cotizacionModal">
+  Solicita Cotización
+</button>
                     <!-- <a href="contact.html" class="nav-item nav-link">Contacto</a>-->
                 </div>
             </div>
@@ -253,6 +257,110 @@
         </div>
     </div>
     <!-- Features End -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="cotizacionModal" tabindex="-1" role="dialog" aria-labelledby="cotizacionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content" style="border-radius: 20px; background-color: #fdd100;">
+      <div class="modal-header border-0">
+        <h5 class="modal-title font-weight-bold mx-auto" id="cotizacionModalLabel">SOLICITA COTIZACIÓN</h5>
+        <button type="button" class="close position-absolute" style="right: 15px;" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="formCotizacion">
+        <div class="modal-body px-4">
+          <div class="form-group">
+            <label>Nombre Completo</label>
+            <input type="text" class="form-control rounded-pill" placeholder="Nombre Completo" required>
+          </div>
+          <div class="form-group">
+            <label>Celular *</label>
+            <input type="tel" class="form-control rounded-pill" placeholder="Celular" required>
+          </div>
+          <div class="form-group">
+            <label>Correo electrónico *</label>
+            <input type="email" class="form-control rounded-pill" placeholder="correo electrónico" required>
+          </div>
+          <div class="form-group">
+            <label>Empresa *</label>
+            <input type="text" class="form-control rounded-pill" placeholder="Empresa" required>
+          </div>
+          <div class="form-group">
+            <label>Ciudad de Origen *</label>
+            <input type="text" class="form-control rounded-pill" placeholder="Ciudad de Origen" required>
+          </div>
+          <div class="form-group">
+            <label>Ciudad de Destino *</label>
+            <input type="text" class="form-control rounded-pill" placeholder="Ciudad de Destino" required>
+          </div>
+          <div class="form-group">
+            <label>Mercancía a transportar *</label>
+            <input type="text" class="form-control rounded-pill" placeholder="¿Qué tipo de mercancía vas a transportar?" required>
+          </div>
+
+          <p class="font-weight-bold mt-4">EL SERVICIO ESPECIALIZADO QUE REQUIERES ES DE:</p>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="serv1">
+            <label class="form-check-label" for="serv1">Flete Carga Consolidada LTL (1 - 14 pallets, 500 - 600 kg...)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="serv2">
+            <label class="form-check-label" for="serv2">Flete Carga Consolidada LTL (Intra Mex)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="serv3">
+            <label class="form-check-label" for="serv3">Fletes Terrestres Contenedores FCL (Completo)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="serv4">
+            <label class="form-check-label" for="serv4">Fletes Carga Sobredimensionada (Equipo Especial)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="serv5">
+            <label class="form-check-label" for="serv5">Almacenaje y Distribución</label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="serv6">
+            <label class="form-check-label" for="serv6">Transporte de Vehículos en Nodrizas</label>
+          </div>
+
+          <button type="button" class="btn btn-danger btn-block mt-3 rounded-pill" onclick="enviarCotizacionWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Script para enviar por WhatsApp -->
+<script>
+  function enviarCotizacionWhatsApp() {
+    const nombre = document.querySelector('#formCotizacion input[placeholder="Nombre Completo"]').value;
+    const celular = document.querySelector('#formCotizacion input[placeholder="Celular"]').value;
+    const correo = document.querySelector('#formCotizacion input[placeholder="correo electrónico"]').value;
+    const empresa = document.querySelector('#formCotizacion input[placeholder="Empresa"]').value;
+    const origen = document.querySelector('#formCotizacion input[placeholder="Ciudad de Origen"]').value;
+    const destino = document.querySelector('#formCotizacion input[placeholder="Ciudad de Destino"]').value;
+    const mercancia = document.querySelector('#formCotizacion input[placeholder="¿Qué tipo de mercancía vas a transportar?"]').value;
+
+    let servicios = [];
+    document.querySelectorAll('#formCotizacion .form-check-input').forEach(chk => {
+      if (chk.checked) {
+        servicios.push(chk.nextElementSibling.textContent.trim());
+      }
+    });
+
+    const mensaje = `👋 Hola, quiero una cotización:\n\n👤 *Nombre:* ${nombre}\n📞 *Celular:* ${celular}\n📧 *Correo:* ${correo}\n🏢 *Empresa:* ${empresa}\n🛫 *Origen:* ${origen}\n🛬 *Destino:* ${destino}\n📦 *Mercancía:* ${mercancia}\n📋 *Servicios requeridos:*\n- ${servicios.join('\n- ')}`;
+
+    const telefono = "5213141047902"; // Reemplaza por tu número de WhatsApp
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  }
+</script>
 
     <!-- Quote Request Start -->
     <div class="container my-4" style="max-width: 600px;">
