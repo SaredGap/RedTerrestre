@@ -332,27 +332,53 @@
     </div>
 
     <!-- Quote Request Start -->
-    <div class="container my-4" style="max-width: 600px;">
-        <div id="quoteCard" class="card card-animated shadow-sm rounded-3">
-            <div class="card-body p-4">
-                <h6 class="text-warning text-uppercase fw-bold mb-2" style="letter-spacing: 1.5px; font-size: 0.85rem;">
-                    Cotiza con nosotros
-                </h6>
-                <h3 class="fw-bold mb-3" style="line-height: 1.1; font-size: 1.75rem;">
-                    ¿Necesitas una <span class="text-warning">cotización rápida?</span>
-                </h3>
-                <p class="mb-3 opacity-75" style="font-size: 0.9rem; color: #0e0e0e;">
-                    En <strong>RedTerrestre</strong> te damos atención personalizada vía WhatsApp para obtener tu
-                    cotización al instante. Sin formularios ni esperas.
-                </p>
-                <a href="https://wa.me/3141047902?text=Hola, %20quisiera%20una%20coti- zación%20para%20transporte %20de%20carga" target="_blank"
-                    class="btn btn-warning btn-sm px-4 fw-semibold" style="letter-spacing: 0.8px;"> <i class="fab fa-whatsapp me-1"></i> </a>
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#cotizacionModal">
-                    Hacer una Cotización
-                </button>
-            </div>
-        </div>
+<div class="container my-5" style="max-width: 600px;">
+  <div id="quoteCard" class="card card-animated shadow-sm rounded-3">
+    <div class="card-body p-4 text-center">
+      <h6 class="text-warning text-uppercase fw-bold mb-2" style="letter-spacing: 1.5px; font-size: 0.85rem;">
+        Cotiza con nosotros
+      </h6>
+
+      <h3 class="fw-bold mb-4" style="line-height: 1.2; font-size: 1.75rem;">
+        ¿Cómo deseas cotizar?
+      </h3>
+
+      <p class="mb-3" style="font-size: 0.95rem; color: #0e0e0e;">
+        En <strong>RedTerrestre</strong> contamos con un equipo especializado para brindarte atención rápida y personalizada, adaptada a tus necesidades logísticas.
+        Sabemos que cada cliente es distinto, por eso te ofrecemos dos formas de cotización:
+      </p>
+
+      <ul class="text-left mb-4" style="font-size: 0.95rem; color: #0e0e0e;">
+        <li><strong>Opción 1:</strong> <span>Comunicación directa vía WhatsApp, sin llenar formularios.</span> 
+          <a href="https://wa.me/523141047902?text=Hola,%20quisiera%20una%20cotización" 
+             target="_blank" 
+             style="font-weight: bold; color: #f06d06; text-decoration: underline;">
+             Da clic aquí.
+          </a>
+        </li>
+        <li><strong>Opción 2:</strong> <span>Llenar un formulario con información detallada y enviarlo por WhatsApp.</span></li>
+      </ul>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <!-- Botón directo a WhatsApp -->
+        <a href="https://wa.me/523141047902?text=Hola,%20quisiera%20una%20cotización" 
+           target="_blank" 
+           class="btn btn-success px-4 font-weight-bold">
+          <i class="fab fa-whatsapp"></i> Rápida por WhatsApp
+        </a>
+
+        <!-- Botón para abrir el modal -->
+        <button type="button"
+                class="btn btn-warning px-4 font-weight-bold"
+                data-toggle="modal"
+                data-target="#cotizacionModal">
+          Cotización Detallada
+        </button>
+      </div>
     </div>
+  </div>
+</div>
+
     <!-- Quote Request End -->
 
     <!-- Footer Start -->
