@@ -9,7 +9,8 @@
     <meta content="Free HTML Templates" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="img/favicon-32x32.png" rel="icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -24,6 +25,18 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+        <!-- Favicon básico -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="img/favicon-32x32.png" sizes="32x32" href="favicon-32x32.png">
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+
+    <!-- Web manifest -->
+    <link rel="manifest" href="img/site.webmanifest">
+    <meta name="theme-color" content="#f06d06">
+
 </head>
 
 <body>
@@ -283,10 +296,29 @@
     </footer>
     <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        ScrollReveal().reveal(".card", {
+            duration: 1000,
+            distance: "50px",
+            easing: "ease-in-out",
+            origin: "bottom",
+            interval: 200,
+        });
+
+        ScrollReveal().reveal(
+            ".jumbotron, .container-fluid > .container > .row > div",
+            {
+                duration: 1200,
+                distance: "60px",
+                easing: "ease-in-out",
+                origin: "bottom",
+                interval: 300,
+            }
+        );
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
