@@ -1,4 +1,5 @@
         // Coordenadas aproximadas de las ciudades / estados
+
         const locations = [
             { name: "Jalisco", coords: [20.6597, -103.3496] },
             { name: "Ciudad de México", coords: [19.4326, -99.1332] },
@@ -60,6 +61,40 @@
             }
         );
 
+
+ function enviarCotizacionWhatsApp() {
+    const nombre = document.querySelector('#formCotizacion input[placeholder="Nombre Completo"]').value;
+    const celular = document.querySelector('#formCotizacion input[placeholder="Celular"]').value;
+    const correo = document.querySelector('#formCotizacion input[placeholder="correo electrónico"]').value;
+    const empresa = document.querySelector('#formCotizacion input[placeholder="Empresa"]').value;
+    const origen = document.querySelector('#formCotizacion input[placeholder="Ciudad de Origen"]').value;
+    const destino = document.querySelector('#formCotizacion input[placeholder="Ciudad de Destino"]').value;
+    const mercancia = document.querySelector('#formCotizacion input[placeholder="¿Qué tipo de mercancía vas a transportar?"]').value;
+
+    let servicios = [];
+    document.querySelectorAll('#formCotizacion .form-check-input').forEach(chk => {
+      if (chk.checked) {
+        servicios.push(chk.nextElementSibling.textContent.trim());
+      }
+    });
+
+    const mensaje = 
+`Hola, quiero una cotización:
+
+Nombre: ${nombre}
+Celular: ${celular}
+Correo: ${correo}
+Empresa: ${empresa}
+Origen: ${origen}
+Destino: ${destino}
+Mercancía: ${mercancia}
+Servicios:
+- ${servicios.join('\n- ')}`;
+
+    const telefono = "523141631209"; // Número WhatsApp con lada
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  }
 
 (function ($) {
     "use strict";
