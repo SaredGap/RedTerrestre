@@ -6,19 +6,85 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+    .navbar {
+      background-color: #111;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.language-btn {
-  border: 2px solid transparent;
-  background-color: transparent;
-  font-size: 1.2rem;
-  transition: all 0.2s ease;
-}
+    .info {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
 
-.language-btn.active {
-  border-color: #f06d06;
-  background-color: rgba(240, 109, 6, 0.15);
-  border-radius: 5px;
-}
+    .lang-btn {
+      font-size: 20px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .offcanvas {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+      transition: right 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .offcanvas.active {
+      right: 0;
+    }
+
+    .offcanvas-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .offcanvas-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .language-option {
+      padding: 10px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      font-size: 16px;
+      background-color: #f2f2f2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: border 0.3s ease;
+    }
+
+    .language-option.active {
+      border-color: orange;
+    }
+
+    .close-btn {
+      font-size: 22px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
 
 
 /* --- Animaciones base --- */

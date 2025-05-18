@@ -66,10 +66,13 @@
             </div>
 
             <!-- Botones de idioma -->
-            <div class="col-auto text-white d-flex align-items-center">
-                <button id="btn-es" onclick="changeLanguage('es')" class="btn btn-sm language-btn me-2">🇲🇽</button>
-                <button id="btn-en" onclick="changeLanguage('en')" class="btn btn-sm language-btn">🇺🇸</button>
+            <div class="language-selector">
+                <select id="languageSelect" class="form-select form-select-sm w-auto">
+                    <option value="es" data-flag="🇲🇽">🇲🇽 Español</option>
+                    <option value="en" data-flag="🇺🇸">🇺🇸 English</option>
+                </select>
             </div>
+
 
         </div>
     </div>

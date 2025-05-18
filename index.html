@@ -49,28 +49,29 @@
 
 <body>
     <!-- Topbar Start -->
-<div class="container-fluid bg-dark">
-  <div class="row py-2 px-lg-5 d-flex justify-content-between align-items-center">
-
-    <!-- Contacto -->
-    <div class="col-auto text-white d-flex align-items-center">
-      <small><i class="fa fa-phone-alt me-2"></i>+52 314 104 7902</small>
-      <small class="px-3">|</small>
-      <small><i class="fa fa-envelope me-2"></i>comercializacion@redterrestre.com</small>
+ <div class="navbar">
+    <div class="info">
+      <span>📞 +52 314 104 7902</span>
+      <span>|</span>
+      <span>✉️ comercializacion@redterrestre.com</span>
     </div>
-
-    <!-- Botones de idioma -->
-    <div class="col-auto text-white d-flex align-items-center">
-      <button id="btn-es" onclick="changeLanguage('es')" class="btn btn-sm language-btn me-2">🇲🇽</button>
-      <button id="btn-en" onclick="changeLanguage('en')" class="btn btn-sm language-btn">🇺🇸</button>
-    </div>
-
+    <button class="lang-btn" onclick="toggleOffcanvas()">🌐</button>
   </div>
-</div>
+
+  <div id="offcanvas" class="offcanvas">
+    <div class="offcanvas-header">
+      <h4>Idioma</h4>
+      <button class="close-btn" onclick="toggleOffcanvas()">×</button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="language-option" data-lang="es">🇲🇽 Español</div>
+      <div class="language-option" data-lang="en">🇺🇸 English</div>
+    </div>
+  </div>
 
 
-            <div class="col-lg-6 text-center text-lg-right">
-                <!-----
+    <div class="col-lg-6 text-center text-lg-right">
+        <!-----
           <div class="d-inline-flex align-items-center">
             <a class="text-white px-2" href="">
               <i class="fab fa-facebook-f"></i>
@@ -89,8 +90,8 @@
             </a>
           </div>
              -->
-            </div>
-        </div>
+    </div>
+    </div>
     </div>
 
     <!-- Navbar Start -->
@@ -169,82 +170,83 @@
     <!-- About End -->
 
     <!-- Services Start -->
-<div class="container-fluid py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h6 class="text-primary text-uppercase font-weight-bold" data-i18n="Servicio">
-                Nuestros Servicios
-            </h6>
-            <h1 class="mb-4" data-i18n="Servicios_titulo_1">Soluciones Logísticas a tu Medida</h1>
-        </div>
-        <div class="row g-4">
-            <!-- Autotransporte Foráneo -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fa fa-road fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title" data-i18n="Servicios_f">Autotransporte foráneo</h5>
+    <div class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase font-weight-bold" data-i18n="Servicio">
+                    Nuestros Servicios
+                </h6>
+                <h1 class="mb-4" data-i18n="Servicios_titulo_1">Soluciones Logísticas a tu Medida</h1>
+            </div>
+            <div class="row g-4">
+                <!-- Autotransporte Foráneo -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-road fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title" data-i18n="Servicios_f">Autotransporte foráneo</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Plataformas y chasis -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fa fa-shipping-fast fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title" data-i18n="Servicios_pyc">Plataformas y chasis</h5>
+                <!-- Plataformas y chasis -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-shipping-fast fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title" data-i18n="Servicios_pyc">Plataformas y chasis</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Autotransporte Local -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fa fa-truck-moving fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title" data-i18n="Servicios_L">Autotransporte local</h5>
+                <!-- Autotransporte Local -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-truck-moving fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title" data-i18n="Servicios_L">Autotransporte local</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Carga Especial -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fa fa-exclamation-triangle fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title" data-i18n="Servicios_Carga">Carga especial</h5>
+                <!-- Carga Especial -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-exclamation-triangle fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title" data-i18n="Servicios_Carga">Carga especial</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Carga Suelta -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fa fa-box-open fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title" data-i18n="Servicios_CargaS">Carga suelta</h5>
+                <!-- Carga Suelta -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-box-open fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title" data-i18n="Servicios_CargaS">Carga suelta</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Almacenamiento -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fa fa-warehouse fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title" data-i18n="Servicios_Almacenamiento">Almacenamiento</h5>
+                <!-- Almacenamiento -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-warehouse fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title" data-i18n="Servicios_Almacenamiento">Almacenamiento</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Desconsolidación y Consolidación -->
-            <div class="col-md-12 col-lg-6 mx-auto">
-                <br />
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fa fa-boxes fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title" data-i18n="Servicios_Desconsolidacion">Desconsolidación y Consolidación</h5>
+                <!-- Desconsolidación y Consolidación -->
+                <div class="col-md-12 col-lg-6 mx-auto">
+                    <br />
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-boxes fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title" data-i18n="Servicios_Desconsolidacion">Desconsolidación y
+                                Consolidación</h5>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Services End -->
 
@@ -262,13 +264,15 @@
                     <h1 class="mb-4" data-i18n="Porque_titulo2">
                         Servicios logísticos más rápidos, seguros y de confianza
                     </h1>
-                    <p class="mb-4 text-justify" style="line-height: 1.7; font-size: 1.1rem" data-i18n="Porque_parrafo1">
+                    <p class="mb-4 text-justify" style="line-height: 1.7; font-size: 1.1rem"
+                        data-i18n="Porque_parrafo1">
                         En <strong>RedTerrestre</strong> ofrecemos más que almacenamiento:
                         brindamos infraestructura de alto rendimiento, operación eficiente
                         y equipamiento robusto para adaptarnos a cualquier necesidad
                         logística.
                     </p>
-                    <p class="mb-4 text-justify" style="line-height: 1.7; font-size: 1.1rem" data-i18n="Porque_parrafo2">
+                    <p class="mb-4 text-justify" style="line-height: 1.7; font-size: 1.1rem"
+                        data-i18n="Porque_parrafo2">
                         Nuestro compromiso es la <strong>rapidez</strong>,
                         <strong>seguridad</strong> y <strong>flexibilidad</strong> en cada
                         servicio, impulsando la eficiencia de tu cadena de suministro con
@@ -287,7 +291,8 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title mx-auto font-weight-bold text-warning" id="cotizacionModalLabel" data-i18n="Modal_titulo">
+                    <h5 class="modal-title mx-auto font-weight-bold text-warning" id="cotizacionModalLabel"
+                        data-i18n="Modal_titulo">
                         SOLICITA TU COTIZACIÓN
                     </h5>
                     <button type="button" class="close position-absolute" style="right: 15px; color: #000"
@@ -298,33 +303,29 @@
 
                 <form id="formCotizacion">
                     <div class="modal-body px-4">
-                        <div class="form-group" >
+                        <div class="form-group">
                             <label data-i18n="Modal_Nombre">Nombre Completo</label>
-                            <input type="text" class="form-control rounded-pill" 
-                                required />
+                            <input type="text" class="form-control rounded-pill" required />
                         </div>
                         <div class="form-group">
                             <label data-i18n="Modal_Celular">Celular *</label>
-                            <input data-i18n="Celular" type="tel" class="form-control rounded-pill"  required />
+                            <input data-i18n="Celular" type="tel" class="form-control rounded-pill" required />
                         </div>
                         <div class="form-group">
                             <label data-i18n="Modal_Correo">Correo electrónico *</label>
-                            <input data-i18n="Correo" type="email" class="form-control rounded-pill" 
-                                required />
+                            <input data-i18n="Correo" type="email" class="form-control rounded-pill" required />
                         </div>
                         <div class="form-group">
-                            <label  data-i18n="Modal_Empresa">Empresa *</label>
-                            <input data-i18n="Empresa" type="text" class="form-control rounded-pill"  required />
+                            <label data-i18n="Modal_Empresa">Empresa *</label>
+                            <input data-i18n="Empresa" type="text" class="form-control rounded-pill" required />
                         </div>
                         <div class="form-group">
                             <label data-i18n="Modal_CiudadO">Ciudad de Origen *</label>
-                            <input data-i18n="Origen" type="text" class="form-control rounded-pill" 
-                                required />
+                            <input data-i18n="Origen" type="text" class="form-control rounded-pill" required />
                         </div>
                         <div class="form-group">
                             <label data-i18n="Modal_CiudadD">Ciudad de Destino *</label>
-                            <input data-i18n="Destino" type="text" class="form-control rounded-pill"
-                                required />
+                            <input data-i18n="Destino" type="text" class="form-control rounded-pill" required />
                         </div>
 
                         <p class="font-weight-bold mt-4 text-dark" data-i18n="Modal_Carga">¿Tipo de carga?</p>
@@ -336,31 +337,37 @@
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="serv2" />
-                            <label class="form-check-label" for="serv2" data-i18n="fletes_local">Fletes terrestres local contenedores FCL
+                            <label class="form-check-label" for="serv2" data-i18n="fletes_local">Fletes terrestres local
+                                contenedores FCL
                                 (Contenedor
                                 completo)</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="serv3" />
-                            <label class="form-check-label" for="serv3" data-i18n="fletes_suelta">Fletes terrestres de carga suelta
+                            <label class="form-check-label" for="serv3" data-i18n="fletes_suelta">Fletes terrestres de
+                                carga suelta
                                 (Dedicado)</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="serv4" />
-                            <label class="form-check-label" for="serv4" data-i18n="fletes_imo">Fletes carga IMO (Peligrosa)</label>
+                            <label class="form-check-label" for="serv4" data-i18n="fletes_imo">Fletes carga IMO
+                                (Peligrosa)</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="serv5" />
-                            <label class="form-check-label" for="serv5" data-i18n="fletes_sobredimensionada">Fletes carga sobredimensionada (Equipo especial,
+                            <label class="form-check-label" for="serv5" data-i18n="fletes_sobredimensionada">Fletes
+                                carga sobredimensionada (Equipo especial,
                                 LowBoy, Cama
                                 Baja)</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="serv6" />
-                            <label class="form-check-label" for="serv6" data-i18n="almacenaje">Almacenaje y distribución</label>
+                            <label class="form-check-label" for="serv6" data-i18n="almacenaje">Almacenaje y
+                                distribución</label>
                         </div>
 
-                        <button data-i18n="enviar_whatsapp" type="button" class="btn btn-warning btn-block rounded-pill font-weight-bold"
+                        <button data-i18n="enviar_whatsapp" type="button"
+                            class="btn btn-warning btn-block rounded-pill font-weight-bold"
                             onclick="enviarCotizacionWhatsApp()">
                             Enviar por WhatsApp
                         </button>
@@ -374,7 +381,8 @@
     <div class="container my-5" style="max-width: 600px">
         <div id="quoteCard" class="card card-animated shadow-sm rounded-3">
             <div class="card-body p-4 text-center">
-                <h6 class="text-warning text-uppercase fw-bold mb-2" style="letter-spacing: 1.5px; font-size: 0.85rem" data-i18n="Cotizacion_Titulo">
+                <h6 class="text-warning text-uppercase fw-bold mb-2" style="letter-spacing: 1.5px; font-size: 0.85rem"
+                    data-i18n="Cotizacion_Titulo">
                     Cotiza con nosotros
                 </h6>
 
@@ -382,19 +390,21 @@
                     ¿Cómo deseas cotizar?
                 </h3>
 
-                <p class="mb-3 text-justify" style="font-size: 0.95rem; color: #0e0e0e" data-i18n="Cotizacion_Descripcion">
+                <p class="mb-3 text-justify" style="font-size: 0.95rem; color: #0e0e0e"
+                    data-i18n="Cotizacion_Descripcion">
                     En <strong>RedTerrestre</strong> contamos con un equipo
                     especializado para brindarte atención rápida y personalizada,
                     adaptada a tus necesidades logísticas. Sabemos que cada cliente es
                     distinto, por eso te ofrecemos dos formas de cotización:
                 </p>
 
-                <ul class="text-left mb-4" style="font-size: 0.95rem; color: #0e0e0e" >
+                <ul class="text-left mb-4" style="font-size: 0.95rem; color: #0e0e0e">
                     <li>
                         <strong data-i18n="Cotizacion_Opcion1">Opción 1:</strong>
                         <span data-i18n="Cotizacion_Texto">Comunicación directa vía WhatsApp, sin llenar
                             formularios.</span>
-                        <a data-i18n="Cotizacion_Boton" href="https://wa.me/523141047902?text=Hola,%20quisiera%20una%20cotización" target="_blank"
+                        <a data-i18n="Cotizacion_Boton"
+                            href="https://wa.me/523141047902?text=Hola,%20quisiera%20una%20cotización" target="_blank"
                             style="
                   font-weight: bold;
                   color: #f06d06;
@@ -405,21 +415,22 @@
                     </li>
                     <li>
                         <strong data-i18n="Cotizacion_Opcion2">Opción 2:</strong>
-                        <span  data-i18n="Cotizacion_Texto2">Llenar un formulario con información detallada y enviarlo por
+                        <span data-i18n="Cotizacion_Texto2">Llenar un formulario con información detallada y enviarlo
+                            por
                             WhatsApp.</span>
                     </li>
                 </ul>
 
                 <div class="d-flex justify-content-center gap-3 flex-wrap">
                     <!-- Botón directo a WhatsApp -->
-                    <a data-i18n="WhatsApp" href="https://wa.me/523141047902?text=Hola,%20quisiera%20una%20cotización" target="_blank"
-                        class="btn btn-success px-4 font-weight-bold">
+                    <a data-i18n="WhatsApp" href="https://wa.me/523141047902?text=Hola,%20quisiera%20una%20cotización"
+                        target="_blank" class="btn btn-success px-4 font-weight-bold">
                         <i class="fab fa-whatsapp"></i> Rápida por WhatsApp
                     </a>
 
                     <!-- Botón para abrir el modal -->
-                    <button data-i18n="Detallada" type="button" class="btn btn-warning px-4 font-weight-bold" data-toggle="modal"
-                        data-target="#cotizacionModal">
+                    <button data-i18n="Detallada" type="button" class="btn btn-warning px-4 font-weight-bold"
+                        data-toggle="modal" data-target="#cotizacionModal">
                         Cotización Detallada
                     </button>
                 </div>
@@ -518,6 +529,23 @@ Servicios:
         }
 
 
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const select = document.getElementById("languageSelect");
+
+            // Cargar idioma guardado o por defecto 'es'
+            const currentLang = localStorage.getItem("language") || "es";
+            select.value = currentLang;
+            applyLanguage(currentLang);
+
+            select.addEventListener("change", () => {
+                const selectedLang = select.value;
+                localStorage.setItem("language", selectedLang);
+                applyLanguage(selectedLang);
+            });
+        });
+
+        
     </script>
 
     <!-- JavaScript Libraries -->
@@ -527,6 +555,8 @@ Servicios:
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/a2d9d5c66e.js" crossorigin="anonymous"></script>
 
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>

@@ -1,27 +1,56 @@
         // Coordenadas aproximadas de las ciudades / estados
+const offcanvas = document.getElementById("offcanvas");
+const langOptions = document.querySelectorAll(".language-option");
 
-        
- async function changeLanguage(lang) {
-            const response = await fetch('lang.json');
-            const data = await response.json();
-            const elements = document.querySelectorAll('[data-i18n]');
+// Traduce usando el archivo JSON
+async function translatePage(lang) {
+  const response = await fetch('lang.json');
+  const data = await response.json();
+  const elements = document.querySelectorAll('[data-i18n]');
 
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (data[lang] && data[lang][key]) {
-                    el.textContent = data[lang][key];
-                }
-            });
+  elements.forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (data[lang] && data[lang][key]) {
+      el.textContent = data[lang][key];
+    }
+  });
+}
 
-            // Guardamos la preferencia en localStorage
-            localStorage.setItem('language', lang);
-        }
+// Marca el idioma activo
+function updateActiveLang(lang) {
+  langOptions.forEach(opt => {
+    opt.classList.toggle("active", opt.dataset.lang === lang);
+  });
+}
 
-        // Detectar idioma guardado
-        document.addEventListener("DOMContentLoaded", () => {
-            const savedLang = localStorage.getItem('language') || 'es';
-            changeLanguage(savedLang);
-        });
+// Selección de idioma: actualiza UI, idioma, menú y almacenamiento
+async function selectLanguage(lang) {
+  localStorage.setItem("language", lang); // Usamos una sola clave
+  updateActiveLang(lang);
+  await translatePage(lang);
+  toggleOffcanvas(); // Cierra el offcanvas
+}
+
+// Cierra/abre el menú lateral
+function toggleOffcanvas() {
+  offcanvas.classList.toggle("active");
+}
+
+// Al cargar la página
+document.addEventListener("DOMContentLoaded", async () => {
+  const savedLang = localStorage.getItem('language') || 'es';
+  updateActiveLang(savedLang);
+  await translatePage(savedLang);
+});
+
+// Eventos de los botones
+langOptions.forEach(opt => {
+  opt.addEventListener("click", () => {
+    const lang = opt.dataset.lang;
+    selectLanguage(lang);
+  });
+});
+
 
 
         const locations = [
