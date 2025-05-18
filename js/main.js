@@ -1,4 +1,24 @@
         // Coordenadas aproximadas de las ciudades / estados
+
+        const btn = document.getElementById('btnBackToTop');
+  btn.style.display = 'none'; // oculto al inicio
+
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 200) {
+      btn.style.display = 'block';
+      btn.style.opacity = '0.6';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+
+  btn.addEventListener('mouseenter', () => btn.style.opacity = '1');
+  btn.addEventListener('mouseleave', () => btn.style.opacity = '0.6');
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
 const offcanvas = document.getElementById("offcanvas");
 const langOptions = document.querySelectorAll(".language-option");
 
