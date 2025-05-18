@@ -1,5 +1,29 @@
         // Coordenadas aproximadas de las ciudades / estados
 
+        
+ async function changeLanguage(lang) {
+            const response = await fetch('lang.json');
+            const data = await response.json();
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (data[lang] && data[lang][key]) {
+                    el.textContent = data[lang][key];
+                }
+            });
+
+            // Guardamos la preferencia en localStorage
+            localStorage.setItem('language', lang);
+        }
+
+        // Detectar idioma guardado
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedLang = localStorage.getItem('language') || 'es';
+            changeLanguage(savedLang);
+        });
+
+
         const locations = [
             { name: "Jalisco", coords: [20.6597, -103.3496] },
             { name: "Ciudad de México", coords: [19.4326, -99.1332] },

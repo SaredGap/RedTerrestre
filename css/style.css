@@ -6,6 +6,21 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+
+.language-btn {
+  border: 2px solid transparent;
+  background-color: transparent;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.language-btn.active {
+  border-color: #f06d06;
+  background-color: rgba(240, 109, 6, 0.15);
+  border-radius: 5px;
+}
+
+
 /* --- Animaciones base --- */
 .animate {
   opacity: 0;
