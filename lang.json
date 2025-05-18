@@ -1,6 +1,7 @@
 {
   "es": {
     "Red_Terrestre":"RedTerrestre",
+    "Contacto":"Contáctanos",
     "Inicio": "Inicio",
     "Nosotros": "Nosotros",
     "Servicios": "Servicios",
@@ -48,7 +49,6 @@
     "almacenaje": "Almacenaje y distribución",
     "enviar_whatsapp": "Enviar por WhatsApp",
 
-
     "Cotizacion_Titulo": "Cotiza con nosotros",
     "Cotizacion_Titulo2": "¿Cómo deseas cotizar?",
     "Cotizacion_Descripcion": "En RedTerrestre contamos con un equipo especializado para brindarte atención rápida y personalizada, adaptada a tus necesidades logísticas. Sabemos que cada cliente es distinto, por eso te ofrecemos dos formas de cotización:",
@@ -58,11 +58,98 @@
     "Cotizacion_Opcion2": "Opción 2:",
     "Cotizacion_Texto2": "Llenar un formulario con información detallada y enviarlo por WhatsApp.",
     "WhatsApp": "Rápida por WhatsApp",
-    "Detallada": "Cotización Detallada"
+    "Detallada": "Cotización Detallada",
+
+    "Slogan": "Soluciones logísticas confiables",
+    "NosotrosH_titulo": "Comprometidos con la Excelencia en Logística",
+    "NosotrosP1": "Red Terrestre nace como una empresa mexicana comprometida con ofrecer soluciones logísticas de alta eficiencia, seguridad y puntualidad. Con una trayectoria forjada en el transporte de carga nacional, hemos evolucionado hasta consolidar una red logística robusta, moderna y adaptada a las exigencias del mercado actual.",
+    "NosotrosP2": "Nuestro crecimiento se ha basado en la confianza de nuestros clientes, la innovación constante y un equipo humano altamente capacitado. Contamos con infraestructura estratégica, tecnología de vanguardia y maquinaria de alto rendimiento que nos permite operar con precisión y cumplir los más altos estándares operativos.",
+    "NosotrosP3": "Hoy, Red Terrestre es sinónimo de confiabilidad y compromiso. Nuestra misión es superar expectativas, nuestra visión es liderar el sector logístico en México, y nuestros valores nos impulsan a construir relaciones duraderas con cada cliente que confía en nosotros.",
+
+    "MisionTitulo": "Misión",
+    "MisionTexto": "Brindar servicios de transporte de carga eficientes, seguros y puntuales, superando las expectativas de nuestros clientes a través de un equipo comprometido, tecnología de vanguardia y una red logística confiable.",
+
+    "VisionTitulo": "Visión",
+    "VisionTexto": "Ser la empresa líder en transporte de carga a nivel nacional, reconocida por su puntualidad, seguridad y compromiso con la excelencia operativa, ofreciendo soluciones logísticas innovadoras que impulsen el crecimiento de nuestros clientes.",
+
+    "ValorTitulo": "Nuestros Valores",
+    "ValorCompromisoTitulo": "Compromiso",
+    "ValorCompromisoTexto": "Actuamos con responsabilidad y pasión, cumpliendo cada entrega con precisión.",
+    "ValorSeguridadTitulo": "Seguridad",
+    "ValorSeguridadTexto": "Resguardamos cada carga con vigilancia 24/7 y procesos certificados.",
+    "ValorEficienciaTitulo": "Eficiencia",
+    "ValorEficienciaTexto": "Optimizamos tiempos y recursos con maquinaria especializada y rutas estratégicas.",
+    "ValorInnovacionTitulo": "Innovación",
+    "ValorInnovacionTexto": "Aplicamos tecnología y mejoras continuas para mantenernos a la vanguardia.",
+    "ValorConfianzaTitulo": "Confianza",
+    "ValorConfianzaTexto": "Fomentamos relaciones sólidas con transparencia y cumplimiento.",
+    "ValorTrabajoEquipoTitulo": "Trabajo en Equipo",
+    "ValorTrabajoEquipoTexto": "Potenciamos el talento colectivo para alcanzar metas comunes con eficiencia.",
+
+    "RutasTitulo": "Rutas Más Frecuentes",
+    "RutaJalisco": "Jalisco",
+    "RutaCDMX": "Mexico City",
+    "RutaChihuahua": "Chihuahua",
+    "RutaAguascalientes": "Aguascalientes",
+    "RutaCoahuila": "Coahuila",
+    "RutaVeracruz": "Veracruz",
+    "RutaPuebla": "Puebla",
+    "RutaNuevoLeon": "Nuevo León",
+    "RutaChiapas": "Chiapas",
+    "RutaTabasco": "Tabasco",
+    "RutaCampeche": "Campeche",
+    "RutaZacatecas": "Zacatecas",
+
+    "ServiciosH_Titulo": "Nuestros Servicios",
+    "ServiciosDescripcion": "Nuestra empresa cuenta con una amplia variedad de servicios diseñados para adaptarse a las necesidades específicas de cada cliente. Ya sea que busques transporte especializado, logística eficiente o asesoría personalizada, en la siguiente sección encontrarás todos los detalles para elegir la opción que mejor se adapte a tu requerimiento.",
+    "ServiciosSubtitulo": "Soluciones Logísticas a tu Medida",
+    "Servicio_Autotransporte_Foraneo_Titulo": "Autotransporte foráneo",
+    "Servicio_Autotransporte_Foraneo_Descripcion": "Servicio de carga general en rutas nacionales con cobertura confiable y puntualidad garantizada.",
+    
+    "Servicio_Plataformas_Chasis_Titulo": "Plataformas y chasis",
+    "Servicio_Plataformas_Chasis_Descripcion": "Disponibilidad de plataformas y chasis de 20 y 40 pies para el manejo eficiente de contenedores.",
+    
+    "Servicio_Autotransporte_Local_Titulo": "Autotransporte local",
+    "Servicio_Autotransporte_Local_Descripcion": "Servicios de carga dentro de la ciudad o zonas metropolitanas, con entregas seguras y flexibles.",
+    
+    "Servicio_Carga_Especial_Titulo": "Carga especial",
+    "Servicio_Carga_Especial_Descripcion": "Manejo especializado para carga IMO, sobredimensionada o con sobrepeso, cumpliendo normativas.",
+    
+    "Servicio_Carga_Suelta_Titulo": "Carga suelta",
+    "Servicio_Carga_Suelta_Descripcion": "Servicio para mercancías no contenedorizadas, con soluciones eficientes de manipulación y transporte.",
+    
+    "Servicio_Almacenamiento_Titulo": "Almacenamiento",
+    "Servicio_Almacenamiento_Descripcion": "Espacios seguros y equipados para almacenamiento temporal o prolongado de mercancía.",
+    
+    "Servicio_Desconsolidacion_Consolidacion_Titulo": "Desconsolidación y Consolidación",
+    "Servicio_Desconsolidacion_Consolidacion_Descripcion": "Servicios eficientes de armado o desarme de carga para optimizar la logística de importación/exportación.",
+
+
+
+
+    "InstalacionesTitulo": "Nuestras Instalaciones y Equipos",
+    "InstalacionesSubtitulo": "Infraestructura de alto nivel para una logística eficiente",
+    "InstalacionA_Titulo": "Almacenes A y B",
+    "InstalacionA_Descripcion": "Interior con capacidad de 2,100 m² y 5 andenes de enrampado para unidades.",
+    "InstalacionC_Titulo": "Almacén C",
+    "InstalacionC_Descripcion": "Espacio techado con capacidad de 2,000 m². Ideal para mercancía sensible.",
+    "InstalacionE_Titulo": "Almacén E",
+    "InstalacionE_Descripcion": "Ubicado a 8.9 km del puerto. Interior de 3,650 m², oficinas, 2 andenes, vigilancia 24/7 y CCTV.",
+    "InstalacionPatio_Titulo": "Patio de Maniobras",
+    "InstalacionPatio_Descripcion": "Área para resguardo y maniobras con contenedores. Operaciones logísticas eficientes.",
+    "InstalacionMaquinaria_Titulo": "Maquinaria Disponible",
+    "Montacargas": "Montacargas 3T, 5T y 25T",
+    "ReachStacker":"Reach Stacker de 45T",
+    "Capacidad":"Alta capacidad operativa"
+    
+    
+
+
   },
 
   "en": {
     "Red_Terrestre":"RedTerrestre",
+    "Contacto":"Contact us",
     "Inicio": "Home",
     "Nosotros": "About Us",
     "Servicios": "Services",
@@ -120,7 +207,88 @@
     "Cotizacion_Opcion2": "Option 2:",
     "Cotizacion_Texto2": "Fill out a detailed form and send it via WhatsApp.",
     "WhatsApp": "Quick via WhatsApp",
-    "Detallada": "Detailed Quote"
+    "Detallada": "Detailed Quote",
+
+    "Slogan": "Reliable logistics solutions",
+    "NosotrosH_titulo": "Committed to Excellence in Logistics",
+    "NosotrosP1": "Red Terrestre was founded as a Mexican company committed to providing highly efficient, safe, and punctual logistics solutions. With a background in national cargo transportation, we have evolved to establish a robust, modern logistics network adapted to the demands of today’s market.",
+    "NosotrosP2": "Our growth is based on the trust of our clients, constant innovation, and a highly skilled team. We have strategic infrastructure, cutting-edge technology, and high-performance machinery that allows us to operate with precision and meet the highest operational standards.",
+    "NosotrosP3": "Today, Red Terrestre is synonymous with reliability and commitment. Our mission is to exceed expectations, our vision is to lead the logistics sector in Mexico, and our values drive us to build lasting relationships with every client who trusts us.",
+
+    "MisionTitulo": "Mission",
+    "MisionTexto": "Provide efficient, safe, and punctual cargo transportation services, exceeding our clients' expectations through a dedicated team, cutting-edge technology, and a reliable logistics network.",
+
+    "VisionTitulo": "Vision",
+    "VisionTexto": "To be the leading freight transport company nationwide, recognized for punctuality, safety, and commitment to operational excellence, offering innovative logistics solutions that drive the growth of our clients.",
+
+    "ValorTitulo": "Our Values",
+    "ValorCompromisoTitulo": "Commitment",
+    "ValorCompromisoTexto": "We act with responsibility and passion, fulfilling every delivery with precision.",
+    "ValorSeguridadTitulo": "Security",
+    "ValorSeguridadTexto": "We safeguard every shipment with 24/7 monitoring and certified processes.",
+    "ValorEficienciaTitulo": "Efficiency",
+    "ValorEficienciaTexto": "We optimize time and resources with specialized equipment and strategic routes.",
+    "ValorInnovacionTitulo": "Innovation",
+    "ValorInnovacionTexto": "We apply technology and continuous improvement to stay ahead.",
+    "ValorConfianzaTitulo": "Trust",
+    "ValorConfianzaTexto": "We foster strong relationships through transparency and reliability.",
+    "ValorTrabajoEquipoTitulo": "Teamwork",
+    "ValorTrabajoEquipoTexto": "We empower collective talent to achieve common goals efficiently.",
+
+    "RutasTitulo": "Most Frequent Routes",
+    "RutaJalisco": "Jalisco",
+    "RutaCDMX": "Mexico City",
+    "RutaChihuahua": "Chihuahua",
+    "RutaAguascalientes": "Aguascalientes",
+    "RutaCoahuila": "Coahuila",
+    "RutaVeracruz": "Veracruz",
+    "RutaPuebla": "Puebla",
+    "RutaNuevoLeon": "Nuevo León",
+    "RutaChiapas": "Chiapas",
+    "RutaTabasco": "Tabasco",
+    "RutaCampeche": "Campeche",
+    "RutaZacatecas": "Zacatecas",
+
+    "ServiciosH_Titulo": "Our Services",
+    "ServiciosDescripcion": "Our company offers a wide range of services tailored to meet the specific needs of each client. Whether you're looking for specialized transportation, efficient logistics, or personalized consulting, the next section provides all the details to help you choose the best option for your requirements.",
+    "ServiciosSubtitulo": "Tailored Logistics Solutions",
+    "Servicio_Autotransporte_Foraneo_Titulo": "Long-Haul Trucking",
+    "Servicio_Autotransporte_Foraneo_Descripcion": "General cargo service on national routes with reliable coverage and guaranteed punctuality.",
+    
+    "Servicio_Plataformas_Chasis_Titulo": "Platforms and Chassis",
+    "Servicio_Plataformas_Chasis_Descripcion": "Availability of 20- and 40-foot platforms and chassis for efficient container handling.",
+    
+    "Servicio_Autotransporte_Local_Titulo": "Local Trucking",
+    "Servicio_Autotransporte_Local_Descripcion": "Cargo services within the city or metropolitan areas, with secure and flexible deliveries.",
+    
+    "Servicio_Carga_Especial_Titulo": "Special Cargo",
+    "Servicio_Carga_Especial_Descripcion": "Specialized handling for IMO cargo, oversized or overweight loads, in compliance with regulations.",
+    
+    "Servicio_Carga_Suelta_Titulo": "Loose Cargo",
+    "Servicio_Carga_Suelta_Descripcion": "Service for non-containerized goods, offering efficient handling and transportation solutions.",
+    
+    "Servicio_Almacenamiento_Titulo": "Warehousing",
+    "Servicio_Almacenamiento_Descripcion": "Secure and equipped spaces for temporary or long-term storage of goods.",
+    
+    "Servicio_Desconsolidacion_Consolidacion_Titulo": "Deconsolidation and Consolidation",
+    "Servicio_Desconsolidacion_Consolidacion_Descripcion": "Efficient cargo assembly or disassembly services to optimize import/export logistics.",
+    
+
+    "InstalacionesTitulo": "Our Facilities and Equipment",
+    "InstalacionesSubtitulo": "High-level infrastructure for efficient logistics",
+    "InstalacionA_Titulo": "Warehouses A and B",
+    "InstalacionA_Descripcion": "Indoor area with a capacity of 2,100 m² and 5 loading ramps for vehicles.",
+    "InstalacionC_Titulo": "Warehouse C",
+    "InstalacionC_Descripcion": "Covered space with a 2,000 m² capacity. Ideal for sensitive goods.",
+    "InstalacionE_Titulo": "Warehouse E",
+    "InstalacionE_Descripcion": "Located 8.9 km from the port. 3,650 m² indoor space, offices, 2 docks, 24/7 surveillance and CCTV.",
+    "InstalacionPatio_Titulo": "Container Yard",
+    "InstalacionPatio_Descripcion": "Area for container storage and handling. Efficient logistics operations.",
+    "InstalacionMaquinaria_Titulo": "Available Machinery",
+    "Montacargas": "3T, 5T and 25T forklifts",
+    "ReachStacker":"45T Reach Stacker",
+    "Capacidad": "High operational capacity"
+
 
 
   }

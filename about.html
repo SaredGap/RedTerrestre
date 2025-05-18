@@ -55,50 +55,23 @@
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark">
-        <div class="row py-2 px-lg-5 d-flex justify-content-between align-items-center">
-
-            <!-- Contacto -->
-            <div class="col-auto text-white d-flex align-items-center">
-                <small><i class="fa fa-phone-alt me-2"></i>+52 314 104 7902</small>
-                <small class="px-3">|</small>
-                <small><i class="fa fa-envelope me-2"></i>comercializacion@redterrestre.com</small>
-            </div>
-
-            <!-- Botones de idioma -->
-            <div class="language-selector">
-                <select id="languageSelect" class="form-select form-select-sm w-auto">
-                    <option value="es" data-flag="🇲🇽">🇲🇽 Español</option>
-                    <option value="en" data-flag="🇺🇸">🇺🇸 English</option>
-                </select>
-            </div>
-
-
+    <div class="navbar">
+        <div class="info">
+            <span>✉️ comercializacion@redterrestre.com</span>
+            <span>|</span>
         </div>
+        <button class="lang-btn" onclick="toggleOffcanvas()">🌐</button>
     </div>
 
-    <div class="col-lg-6 text-center text-lg-right">
-        <!-----
-            <div class="d-inline-flex align-items-center">
-              <a class="text-white px-2" href="">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a class="text-white px-2" href="">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a class="text-white px-2" href="">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a class="text-white px-2" href="">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a class="text-white pl-2" href="">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-               -->
-    </div>
-    </div>
+    <div id="offcanvas" class="offcanvas">
+        <div class="offcanvas-header">
+            <h4>Idioma</h4>
+            <button class="close-btn" onclick="toggleOffcanvas()">×</button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="language-option" data-lang="es">🇲🇽 Español</div>
+            <div class="language-option" data-lang="en">🇺🇸 English</div>
+        </div>
     </div>
     <!-- Topbar End -->
 
@@ -113,9 +86,9 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Inicio</a>
-                    <a href="about.html" class="nav-item nav-link active">Nosotros</a>
-                    <a href="service.html" class="nav-item nav-link">Servicios</a>
+                    <a href="index.html" class="nav-item nav-link" data-i18n="Inicio">Inicio</a>
+                    <a href="about.html" class="nav-item nav-link active" data-i18n="Nosotros">Nosotros</a>
+                    <a href="service.html" class="nav-item nav-link" data-i18n="Servicios">Servicios</a>
                     <!--  <a href="contact.html" class="nav-item nav-link">Contacto</a>-->
                 </div>
             </div>
@@ -127,7 +100,7 @@
     <div class="jumbotron jumbotron-fluid mb-5">
         <div class="container text-center py-5">
             <img src="img/logo.png" alt="Logo de Red Terrestre" style="max-height: 175px; margin-bottom: 100px" />
-            <h1 class="text-white display-3">Nosotros</h1>
+            <h1 class="text-white display-3" data-i18n="Nosotros">Nosotros</h1>
         </div>
     </div>
     <!-- Header End -->
@@ -164,24 +137,24 @@
 
                     <!-- Eslogan debajo del carrusel -->
                     <div class="bg-primary text-white text-center p-3 mt-3 rounded">
-                        <h5 class="m-0">Soluciones logísticas confiables</h5>
+                        <h5 class="m-0" data-i18n="Slogan">Soluciones logísticas confiables</h5>
                     </div>
                 </div>
 
                 <!-- Texto -->
                 <div class="col-lg-7">
-                    <h6 class="text-primary text-uppercase font-weight-bold">
+                    <h6 data-i18n="Nosotros" class="text-primary text-uppercase font-weight-bold">
                         Nosotros
                     </h6>
-                    <h1 class="mb-4">Comprometidos con la Excelencia en Logística</h1>
-                    <p class="mb-3 text-justify">
+                    <h1 class="mb-4" data-i18n="NosotrosH_titulo">Comprometidos con la Excelencia en Logística</h1>
+                    <p class="mb-3 text-justify" data-i18n="NosotrosP1">
                         Red Terrestre nace como una empresa mexicana comprometida con
                         ofrecer soluciones logísticas de alta eficiencia, seguridad y
                         puntualidad. Con una trayectoria forjada en el transporte de carga
                         nacional, hemos evolucionado hasta consolidar una red logística
                         robusta, moderna y adaptada a las exigencias del mercado actual.
                     </p>
-                    <p class="mb-3 text-justify">
+                    <p class="mb-3 text-justify" data-i18n="NosotrosP2">
                         Nuestro crecimiento se ha basado en la confianza de nuestros
                         clientes, la innovación constante y un equipo humano altamente
                         capacitado. Contamos con infraestructura estratégica, tecnología
@@ -189,7 +162,7 @@
                         operar con precisión y cumplir los más altos estándares
                         operativos.
                     </p>
-                    <p class="mb-0 text-justify">
+                    <p class="mb-0 text-justify" data-i18n="NosotrosP3">
                         Hoy, Red Terrestre es sinónimo de confiabilidad y compromiso.
                         Nuestra misión es superar expectativas, nuestra visión es liderar
                         el sector logístico en México, y nuestros valores nos impulsan a
@@ -210,9 +183,10 @@
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <i class="fa fa-bullseye me-2 text-primary"></i>Misión
+                            <i class="fa fa-bullseye me-2 text-primary "></i><span
+                                data-i18n="MisionTitulo">Misión</span>
                         </h5>
-                        <p class="card-text text-justify">
+                        <p class="card-text text-justify" data-i18n="MisionTexto">
                             Brindar servicios de transporte de carga eficientes, seguros y
                             puntuales, superando las expectativas de nuestros clientes a
                             través de un equipo comprometido, tecnología de vanguardia y una
@@ -227,9 +201,9 @@
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <i class="fa fa-eye me-2 text-success"></i>Visión
+                            <i class="fa fa-eye me-2 text-success"></i><span data-i18n="VisionTitulo">Visión</span>
                         </h5>
-                        <p class="card-text text-justify">
+                        <p class="card-text text-justify" data-i18n="VisionTexto">
                             Ser la empresa líder en transporte de carga a nivel nacional,
                             reconocida por su puntualidad, seguridad y compromiso con la
                             excelencia operativa, ofreciendo soluciones logísticas
@@ -242,14 +216,14 @@
     </div>
 
     <div class="container my-5">
-        <h3 class="text-center mb-4">Nuestros Valores</h3>
+        <h3 class="text-center mb-4" data-i18n="ValorTitulo">Nuestros Valores</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card shadow-sm">
                     <div class="card-body text-center d-flex flex-column">
                         <i class="fa fa-handshake fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Compromiso</h5>
-                        <p class="card-text mt-auto">
+                        <h5 class="card-title" data-i18n="ValorCompromisoTitulo">Compromiso</h5>
+                        <p class="card-text mt-auto" data-i18n="ValorCompromisoTexto">
                             Actuamos con responsabilidad y pasión, cumpliendo cada entrega
                             con precisión.
                         </p>
@@ -261,8 +235,8 @@
                 <div class="card shadow-sm">
                     <div class="card-body text-center d-flex flex-column">
                         <i class="fa fa-lock fa-3x text-success mb-3"></i>
-                        <h5 class="card-title">Seguridad</h5>
-                        <p class="card-text mt-auto">
+                        <h5 class="card-title" data-i18n="ValorSeguridadTitulo">Seguridad</h5>
+                        <p class="card-text mt-auto" data-i18n="ValorSeguridadTexto">
                             Resguardamos cada carga con vigilancia 24/7 y procesos
                             certificados.
                         </p>
@@ -274,8 +248,8 @@
                 <div class="card shadow-sm">
                     <div class="card-body text-center d-flex flex-column">
                         <i class="fa fa-bolt fa-3x text-warning mb-3"></i>
-                        <h5 class="card-title">Eficiencia</h5>
-                        <p class="card-text mt-auto">
+                        <h5 class="card-title" data-i18n="ValorEficienciaTitulo">Eficiencia</h5>
+                        <p class="card-text mt-auto" data-i18n="ValorEficienciaTexto">
                             Optimizamos tiempos y recursos con maquinaria especializada y
                             rutas estratégicas.
                         </p>
@@ -287,8 +261,8 @@
                 <div class="card shadow-sm">
                     <div class="card-body text-center d-flex flex-column">
                         <i class="fa fa-lightbulb fa-3x text-info mb-3"></i>
-                        <h5 class="card-title">Innovación</h5>
-                        <p class="card-text mt-auto">
+                        <h5 class="card-title" data-i18n="ValorInnovacionTitulo">Innovación</h5>
+                        <p class="card-text mt-auto" data-i18n="ValorInnovacionTexto">
                             Aplicamos tecnología y mejoras continuas para mantenernos a la
                             vanguardia.
                         </p>
@@ -300,8 +274,8 @@
                 <div class="card shadow-sm">
                     <div class="card-body text-center d-flex flex-column">
                         <i class="fa fa-heart fa-3x text-danger mb-3"></i>
-                        <h5 class="card-title">Confianza</h5>
-                        <p class="card-text mt-auto">
+                        <h5 class="card-title" data-i18n="ValorConfianzaTitulo">Confianza</h5>
+                        <p class="card-text mt-auto" data-i18n="ValorConfianzaTexto">
                             Fomentamos relaciones sólidas con transparencia y cumplimiento.
                         </p>
                     </div>
@@ -312,8 +286,8 @@
                 <div class="card shadow-sm">
                     <div class="card-body text-center d-flex flex-column">
                         <i class="fa fa-users fa-3x text-secondary mb-3"></i>
-                        <h5 class="card-title">Trabajo en Equipo</h5>
-                        <p class="card-text mt-auto">
+                        <h5 class="card-title" data-i18n="ValorTrabajoEquipoTitulo">Trabajo en Equipo</h5>
+                        <p class="card-text mt-auto" data-i18n="ValorTrabajoEquipoTexto">
                             Potenciamos el talento colectivo para alcanzar metas comunes con
                             eficiencia.
                         </p>
@@ -333,20 +307,20 @@
                 </div>
                 <!-- Lista de estados -->
                 <div class="col-md-6">
-                    <h3>Rutas Más Frecuentes</h3>
+                    <h3 data-i18n="RutasTitulo">Rutas Más Frecuentes</h3>
                     <ul style="list-style-type: disc; padding-left: 20px;">
-                        <li>Jalisco</li>
-                        <li>Ciudad de México</li>
-                        <li>Chihuahua</li>
-                        <li>Aguascalientes</li>
-                        <li>Coahuila</li>
-                        <li>Veracruz</li>
-                        <li>Puebla</li>
-                        <li>Nuevo León</li>
-                        <li>Chiapas</li>
-                        <li>Tabasco</li>
-                        <li>Campeche</li>
-                        <li>Zacatecas</li>
+                        <li data-i18n="RutaJalisco">Jalisco</li>
+                        <li data-i18n="RutaCDMX">Ciudad de México</li>
+                        <li data-i18n="RutaChihuahua">Chihuahua</li>
+                        <li data-i18n="RutaAguascalientes">Aguascalientes</li>
+                        <li data-i18n="RutaCoahuila">Coahuila</li>
+                        <li data-i18n="RutaVeracruz">Veracruz</li>
+                        <li data-i18n="RutaPuebla">Puebla</li>
+                        <li data-i18n="RutaNuevoLeon">Nuevo León</li>
+                        <li data-i18n="RutaChiapas">Chiapas</li>
+                        <li data-i18n="RutaTabasco">Tabasco</li>
+                        <li data-i18n="RutaCampeche">Campeche</li>
+                        <li data-i18n="RutaZacatecas">Zacatecas</li>
                     </ul>
                 </div>
             </div>
@@ -358,7 +332,10 @@
     <footer class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">
         <div class="row">
             <div class="col-md-6 mb-3">
-                <h5 class="text-primary mb-3">Contáctanos</h5>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="text-primary mb-3" data-i18n="Contacto">Contáctanos</h5>
+                    <button class="lang-btn" onclick="toggleOffcanvas()">🌐</button>
+                </div>
                 <p class="mb-1">
                     <i class="fa fa-map-marker-alt mr-2"></i>Tapeixtles, Manzanillo,
                     Colima C.P. 28239

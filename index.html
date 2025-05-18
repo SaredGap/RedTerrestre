@@ -49,24 +49,24 @@
 
 <body>
     <!-- Topbar Start -->
- <div class="navbar">
-    <div class="info">
-      <span>✉️ comercializacion@redterrestre.com</span>
-      <span>|</span>
+    <div class="navbar">
+        <div class="info">
+            <span>✉️ comercializacion@redterrestre.com</span>
+            <span>|</span>
+        </div>
+        <button class="lang-btn" onclick="toggleOffcanvas()">🌐</button>
     </div>
-    <button class="lang-btn" onclick="toggleOffcanvas()">🌐</button>
-  </div>
 
-  <div id="offcanvas" class="offcanvas">
-    <div class="offcanvas-header">
-      <h4>Idioma</h4>
-      <button class="close-btn" onclick="toggleOffcanvas()">×</button>
+    <div id="offcanvas" class="offcanvas">
+        <div class="offcanvas-header">
+            <h4>Idioma</h4>
+            <button class="close-btn" onclick="toggleOffcanvas()">×</button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="language-option" data-lang="es">🇲🇽 Español</div>
+            <div class="language-option" data-lang="en">🇺🇸 English</div>
+        </div>
     </div>
-    <div class="offcanvas-body">
-      <div class="language-option" data-lang="es">🇲🇽 Español</div>
-      <div class="language-option" data-lang="en">🇺🇸 English</div>
-    </div>
-  </div>
 
 
     <div class="col-lg-6 text-center text-lg-right">
@@ -443,7 +443,10 @@
     <footer class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">
         <div class="row">
             <div class="col-md-6 mb-3">
-                <h5 class="text-primary mb-3">Contáctanos</h5>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="text-primary mb-3" data-i18n="Contacto">Contáctanos</h5>
+                    <button class="lang-btn" onclick="toggleOffcanvas()">🌐</button>
+                </div>
                 <p class="mb-1">
                     <i class="fa fa-map-marker-alt mr-2"></i>Tapeixtles, Manzanillo,
                     Colima C.P. 28239
@@ -456,6 +459,7 @@
                 reservados.</small>
         </div>
     </footer>
+
     <!-- Footer End -->
 
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -511,14 +515,14 @@
 
             const mensaje = `Hola, me gustaría una cotización con la siguiente información:
 
-Nombre: ${nombre}
-Celular: ${celular}
-Correo: ${correo}
-Empresa: ${empresa}
-Origen: ${origen}
-Destino: ${destino}
-Servicios:
-- ${servicios.join("\n- ")}`;
+            Nombre: ${nombre}
+            Celular: ${celular}
+            Correo: ${correo}
+            Empresa: ${empresa}
+            Origen: ${origen}
+            Destino: ${destino}
+            Servicios:
+            - ${servicios.join("\n- ")}`;
 
             const telefono = "523141047902"; // Cambia a tu número real
             const url = `https://wa.me/${telefono}?text=${encodeURIComponent(
@@ -544,7 +548,7 @@ Servicios:
             });
         });
 
-        
+
     </script>
 
     <!-- JavaScript Libraries -->

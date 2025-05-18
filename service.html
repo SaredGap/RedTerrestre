@@ -48,37 +48,22 @@
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark">
-        <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+52 314 104 7902</small>
-                    <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>comercializacion@redterrestre.com</small>
-                </div>
-            </div>
+    <div class="navbar">
+        <div class="info">
+            <span>✉️ comercializacion@redterrestre.com</span>
+            <span>|</span>
+        </div>
+        <button class="lang-btn" onclick="toggleOffcanvas()">🌐</button>
+    </div>
 
-            <div class="col-lg-6 text-center text-lg-right">
-                <!-----
-            <div class="d-inline-flex align-items-center">
-              <a class="text-white px-2" href="">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a class="text-white px-2" href="">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a class="text-white px-2" href="">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a class="text-white px-2" href="">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a class="text-white pl-2" href="">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-               -->
-            </div>
+    <div id="offcanvas" class="offcanvas">
+        <div class="offcanvas-header">
+            <h4>Idioma</h4>
+            <button class="close-btn" onclick="toggleOffcanvas()">×</button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="language-option" data-lang="es">🇲🇽 Español</div>
+            <div class="language-option" data-lang="en">🇺🇸 English</div>
         </div>
     </div>
     <!-- Topbar End -->
@@ -95,9 +80,9 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="index.html" class="nav-item nav-link ">Inicio</a>
-                    <a href="about.html" class="nav-item nav-link">Nosotros</a>
-                    <a href="service.html" class="nav-item nav-link active">Servicios</a>
+                    <a href="index.html" class="nav-item nav-link " data-i18n="Inicio">Inicio</a>
+                    <a href="about.html" class="nav-item nav-link" data-i18n="Nosotros">Nosotros</a>
+                    <a href="service.html" class="nav-item nav-link active" data-i18n="Servicios">Servicios</a>
                     <!--  <a href="contact.html" class="nav-item nav-link">Contacto</a>-->
                 </div>
             </div>
@@ -110,7 +95,7 @@
     <div class="jumbotron jumbotron-fluid mb-5">
         <div class="container text-center py-5">
             <img src="img/logo.png" alt="Logo de Red Terrestre" style="max-height: 175px; margin-bottom: 100px;">
-            <h1 class="text-white display-3">Servicios</h1>
+            <h1 class="text-white display-3" data-i18n="Servicios">Servicios</h1>
             <div class="d-inline-flex align-items-center text-white">
             </div>
         </div>
@@ -122,14 +107,15 @@
     <div class="container-fluid py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="text-primary text-uppercase font-weight-bold">Nuestros Servicios</h6>
-                <p>
+                <h6 class="text-primary text-uppercase font-weight-bold" data-i18n="ServiciosH_Titulo">Nuestros
+                    Servicios</h6>
+                <p data-i18n="ServiciosDescripcion">
                     Nuestra empresa cuenta con una amplia variedad de servicios diseñados para adaptarse a las
                     necesidades específicas de cada cliente. Ya sea que busques transporte especializado, logística
                     eficiente o asesoría personalizada, en la siguiente sección encontrarás todos los detalles para
                     elegir la opción que mejor se adapte a tu requerimiento.
                 </p>
-                <h1 class="mb-4">Soluciones Logísticas a tu Medida</h1>
+                <h1 class="mb-4" data-i18n="ServiciosSubtitulo">Soluciones Logísticas a tu Medida</h1>
             </div>
             <div class="row g-4">
                 <!-- Autotransporte Foráneo -->
@@ -137,8 +123,10 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-road fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Autotransporte foráneo</h5>
-                            <p class="card-text">Servicio de carga general en rutas nacionales con cobertura confiable y
+                            <h5 class="card-title" data-i18n="Servicio_Autotransporte_Foraneo_Titulo">Autotransporte
+                                foráneo</h5>
+                            <p class="card-text" data-i18n="Servicio_Autotransporte_Foraneo_Descripcion">Servicio de
+                                carga general en rutas nacionales con cobertura confiable y
                                 puntualidad garantizada.</p>
                         </div>
                     </div>
@@ -148,8 +136,10 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-shipping-fast fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Plataformas y chasis</h5>
-                            <p class="card-text">Disponibilidad de plataformas y chasis de 20 y 40 pies para el manejo
+                            <h5 class="card-title" data-i18n="Servicio_Plataformas_Chasis_Titulo">Plataformas y chasis
+                            </h5>
+                            <p class="card-text" data-i18n="Servicio_Plataformas_Chasis_Descripcion">Disponibilidad de
+                                plataformas y chasis de 20 y 40 pies para el manejo
                                 eficiente de contenedores.</p>
                         </div>
                     </div>
@@ -159,8 +149,10 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-truck-moving fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Autotransporte local</h5>
-                            <p class="card-text">Servicios de carga dentro de la ciudad o zonas metropolitanas, con
+                            <h5 class="card-title" data-i18n="Servicio_Autotransporte_Local_Titulo">Autotransporte local
+                            </h5>
+                            <p class="card-text" data-i18n="Servicio_Autotransporte_Local_Descripcion">Servicios de
+                                carga dentro de la ciudad o zonas metropolitanas, con
                                 entregas seguras y flexibles.</p>
                         </div>
                     </div>
@@ -170,8 +162,9 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-exclamation-triangle fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Carga especial</h5>
-                            <p class="card-text">Manejo especializado para carga IMO, sobredimensionada o con sobrepeso,
+                            <h5 class="card-title" data-i18n="Servicio_Carga_Especial_Titulo">Carga especial</h5>
+                            <p class="card-text" data-i18n="Servicio_Carga_Especial_Descripcion">Manejo especializado
+                                para carga IMO, sobredimensionada o con sobrepeso,
                                 cumpliendo normativas.</p>
                         </div>
                     </div>
@@ -181,8 +174,9 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-box-open fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Carga suelta</h5>
-                            <p class="card-text">Servicio para mercancías no contenedorizadas, con soluciones eficientes
+                            <h5 class="card-title" data-i18n="Servicio_Carga_Suelta_Titulo">Carga suelta</h5>
+                            <p class="card-text" data-i18n="Servicio_Carga_Suelta_Descripcion">Servicio para mercancías
+                                no contenedorizadas, con soluciones eficientes
                                 de manipulación y transporte.</p>
                         </div>
                     </div>
@@ -192,8 +186,9 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-warehouse fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Almacenamiento</h5>
-                            <p class="card-text">Espacios seguros y equipados para almacenamiento temporal o prolongado
+                            <h5 class="card-title" data-i18n="Servicio_Almacenamiento_Titulo">Almacenamiento</h5>
+                            <p class="card-text" data-i18n="Servicio_Almacenamiento_Descripcion">Espacios seguros y
+                                equipados para almacenamiento temporal o prolongado
                                 de mercancía.</p>
                         </div>
                     </div>
@@ -204,8 +199,10 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-boxes fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Desconsolidación y Consolidación</h5>
-                            <p class="card-text">Servicios eficientes de armado o desarme de carga para optimizar la
+                            <h5 class="card-title" data-i18n="Servicio_Desconsolidacion_Consolidacion_Titulo">
+                                Desconsolidación y Consolidación</h5>
+                            <p class="card-text" data-i18n="Servicio_Desconsolidacion_Consolidacion_Descripcion">
+                                Servicios eficientes de armado o desarme de carga para optimizar la
                                 logística de importación/exportación.</p>
                         </div>
                     </div>
@@ -220,8 +217,9 @@
     <!-- Sección de Servicios - RedTerrestre -->
     <section class="container py-5" id="servicios">
         <div class="text-center mb-5">
-            <h2 class="text-primary">Nuestras Instalaciones y Equipos</h2>
-            <p class="text-muted">Infraestructura de alto nivel para una logística eficiente</p>
+            <h2 class="text-primary" data-i18n="InstalacionesTitulo">Nuestras Instalaciones y Equipos</h2>
+            <p class="text-muted" data-i18n="InstalacionesSubtitulo">Infraestructura de alto nivel para una logística
+                eficiente</p>
         </div>
         <div class="row">
             <!-- Almacenes A y B -->
@@ -229,8 +227,8 @@
                 <div class="card h-100 shadow-sm">
                     <img src="img/AlmacenA.png" class="card-img-top" alt="Almacenes A y B">
                     <div class="card-body">
-                        <h5 class="card-title">Almacenes A y B</h5>
-                        <p class="card-text">
+                        <h5 class="card-title" data-i18n="InstalacionA_Titulo">Almacenes A y B</h5>
+                        <p class="card-text" data-i18n="InstalacionA_Descripcion">
                             Interior con capacidad de <strong>2,100 m²</strong> y <strong>5 andenes</strong> de
                             enrampado para unidades.
                         </p>
@@ -243,8 +241,8 @@
                 <div class="card h-100 shadow-sm">
                     <img src="img/AlmacenC.png" class="card-img-top" alt="Almacén techado C">
                     <div class="card-body">
-                        <h5 class="card-title">Almacén C</h5>
-                        <p class="card-text">
+                        <h5 class="card-title" data-i18n="InstalacionC_Titulo">Almacén C</h5>
+                        <p class="card-text" data-i18n="InstalacionC_Descripcion">
                             Espacio <strong>techado</strong> con capacidad de <strong>2,000 m²</strong>. Ideal para
                             mercancía sensible.
                         </p>
@@ -257,8 +255,8 @@
                 <div class="card h-100 shadow-sm">
                     <img src="img/AlmacenE.png" class="card-img-top" alt="Almacén techado C">
                     <div class="card-body">
-                        <h5 class="card-title">Almacén E</h5>
-                        <p class="card-text">
+                        <h5 class="card-title" data-i18n="InstalacionE_Titulo">Almacén E</h5>
+                        <p class="card-text" data-i18n="InstalacionE_Descripcion">
                             Ubicado a 8.9 km del puerto. Interior de 3,650 m², oficinas, 2 andenes, vigilancia 24/7 y
                             CCTV.
                         </p>
@@ -271,8 +269,8 @@
                 <div class="card h-100 shadow-sm">
                     <img src="img/Patio.png" class="card-img-top" alt="Almacén techado C">
                     <div class="card-body">
-                        <h5 class="card-title">Patio de Maniobras</h5>
-                        <p class="card-text">
+                        <h5 class="card-title" data-i18n="InstalacionPatio_Titulo">Patio de Maniobras</h5>
+                        <p class="card-text" data-i18n="InstalacionPatio_Descripcion">
                             Área para resguardo y maniobras con contenedores. Operaciones logísticas eficientes.
                         </p>
                     </div>
@@ -284,12 +282,12 @@
                 <div class="card h-100 shadow-sm">
                     <img src="img/Montacargas.png" class="card-img-top" alt="Montacargas">
                     <div class="card-body">
-                        <h5 class="card-title">Maquinaria Disponible</h5>
+                        <h5 class="card-title" data-i18n="InstalacionMaquinaria_Titulo">Maquinaria Disponible</h5>
                         <p class="card-text">
-                        <ul style="padding-left: 1.2rem;">
-                            <li>Montacargas 3T, 5T y 25T</li>
-                            <li>Reach Stacker de 45T</li>
-                            <li>Alta capacidad operativa</li>
+                        <ul style="padding-left: 1.2rem;" data-i18n="InstalacionMaquinaria_Lista">
+                            <li data-i18n="Montacargas">Montacargas 3T, 5T y 25T</li>
+                            <li data-i18n="ReachStacker">Reach Stacker de 45T</li>
+                            <li data-i18n="Capacidad">Alta capacidad operativa</li>
                         </ul>
                         </p>
                     </div>
@@ -304,7 +302,10 @@
     <footer class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">
         <div class="row">
             <div class="col-md-6 mb-3">
-                <h5 class="text-primary mb-3">Contáctanos</h5>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="text-primary mb-3" data-i18n="Contacto">Contáctanos</h5>
+                    <button class="lang-btn" onclick="toggleOffcanvas()">🌐</button>
+                </div>
                 <p class="mb-1">
                     <i class="fa fa-map-marker-alt mr-2"></i>Tapeixtles, Manzanillo,
                     Colima C.P. 28239
