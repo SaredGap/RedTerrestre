@@ -21,6 +21,7 @@
     "Servicios_CargaS": "Carga suelta",
     "Servicios_Almacenamiento": "Almacenamiento",
     "Servicios_Desconsolidacion": "Desconsolidación y Consolidación",
+    "Servicio_Consultoria_Aduanal_Titulo": "Consultoría Aduanal",
 
     "Porque_titulo": "¿Por qué elegirnos?",
     "Porque_titulo2": "Servicios logísticos más rápidos, seguros y de confianza",
@@ -123,6 +124,9 @@
     
     "Servicio_Desconsolidacion_Consolidacion_Titulo": "Desconsolidación y Consolidación",
     "Servicio_Desconsolidacion_Consolidacion_Descripcion": "Servicios eficientes de armado o desarme de carga para optimizar la logística de importación/exportación.",
+
+    "Servicio_Consultoria_Aduanal_Titulo": "Consultoría Aduanal" ,
+    "Servicio_Consultoria_Aduanal_Descripcion":"Asesoría experta en regulaciones aduaneras para agilizar procesos de importación y exportación, evitando contratiempos y optimizando costos", 
 
 
 
@@ -272,6 +276,10 @@
     
     "Servicio_Desconsolidacion_Consolidacion_Titulo": "Deconsolidation and Consolidation",
     "Servicio_Desconsolidacion_Consolidacion_Descripcion": "Efficient cargo assembly or disassembly services to optimize import/export logistics.",
+
+    "Servicio_Consultoria_Aduanal_Titulo": "Customs Consulting",
+    "Servicio_Consultoria_Aduanal_Descripcion": "Expert advice on customs regulations to streamline import and export processes, avoid setbacks, and optimize costs",
+
     
 
     "InstalacionesTitulo": "Our Facilities and Equipment",
