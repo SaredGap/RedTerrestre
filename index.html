@@ -287,96 +287,97 @@ comercial.redterrestre@gmail.com </span>
     <!-- Features End -->
 
     <!-- MODAL -->
-    <div class="modal fade" id="cotizacionModal" tabindex="-1" role="dialog" aria-labelledby="cotizacionModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title mx-auto font-weight-bold text-warning" id="cotizacionModalLabel"
-                        data-i18n="Modal_titulo">
-                        SOLICITA TU COTIZACIÓN
-                    </h5>
-                    <button type="button" class="close position-absolute" style="right: 15px; color: #000"
-                        data-dismiss="modal" aria-label="Cerrar">
-                        <span aria-hidden="true">&times;</span>
+   <!-- MODAL -->
+<div class="modal fade" id="cotizacionModal" tabindex="-1" role="dialog" aria-labelledby="cotizacionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title mx-auto font-weight-bold text-warning" id="cotizacionModalLabel"
+                    data-i18n="Modal_titulo">
+                    SOLICITA TU COTIZACIÓN
+                </h5>
+                <button type="button" class="close position-absolute" style="right: 15px; color: #000"
+                    data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="formCotizacion">
+                <div class="modal-body px-4">
+                    <div class="form-group">
+                        <label for="nombre" data-i18n="Modal_Nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" class="form-control rounded-pill" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="celular" data-i18n="Modal_Celular">Celular *</label>
+                        <input type="tel" id="celular" class="form-control rounded-pill" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="correo" data-i18n="Modal_Correo">Correo electrónico *</label>
+                        <input type="email" id="correo" class="form-control rounded-pill" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa" data-i18n="Modal_Empresa">Empresa *</label>
+                        <input type="text" id="empresa" class="form-control rounded-pill" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="origen" data-i18n="Modal_CiudadO">Ciudad de Origen *</label>
+                        <input type="text" id="origen" class="form-control rounded-pill" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="destino" data-i18n="Modal_CiudadD">Ciudad de Destino *</label>
+                        <input type="text" id="destino" class="form-control rounded-pill" required />
+                    </div>
+
+                    <p class="font-weight-bold mt-4 text-dark" data-i18n="Modal_Carga">¿Tipo de carga?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="serv1" />
+                        <label class="form-check-label" for="serv1" data-i18n="fletes_foraneos">
+                            Fletes terrestres foráneos contenedores FCL (Contenedor completo)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="serv2" />
+                        <label class="form-check-label" for="serv2" data-i18n="fletes_local">
+                            Fletes terrestres local contenedores FCL (Contenedor completo)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="serv3" />
+                        <label class="form-check-label" for="serv3" data-i18n="fletes_suelta">
+                            Fletes terrestres de carga suelta (Dedicado)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="serv4" />
+                        <label class="form-check-label" for="serv4" data-i18n="fletes_imo">
+                            Fletes carga IMO (Peligrosa)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="serv5" />
+                        <label class="form-check-label" for="serv5" data-i18n="fletes_sobredimensionada">
+                            Fletes carga sobredimensionada (Equipo especial, LowBoy, Cama Baja)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="serv6" />
+                        <label class="form-check-label" for="serv6" data-i18n="almacenaje">
+                            Almacenaje y distribución
+                        </label>
+                    </div>
+
+                    <button data-i18n="enviar_whatsapp" type="button"
+                        class="btn btn-warning btn-block rounded-pill font-weight-bold"
+                        onclick="enviarCotizacionWhatsApp()">
+                        Enviar por WhatsApp
                     </button>
                 </div>
-
-                <form id="formCotizacion">
-                    <div class="modal-body px-4">
-                        <div class="form-group">
-                            <label data-i18n="Modal_Nombre">Nombre Completo</label>
-                            <input type="text" class="form-control rounded-pill" required />
-                        </div>
-                        <div class="form-group">
-                            <label data-i18n="Modal_Celular">Celular *</label>
-                            <input data-i18n="Celular" type="tel" class="form-control rounded-pill" required />
-                        </div>
-                        <div class="form-group">
-                            <label data-i18n="Modal_Correo">Correo electrónico *</label>
-                            <input data-i18n="Correo" type="email" class="form-control rounded-pill" required />
-                        </div>
-                        <div class="form-group">
-                            <label data-i18n="Modal_Empresa">Empresa *</label>
-                            <input data-i18n="Empresa" type="text" class="form-control rounded-pill" required />
-                        </div>
-                        <div class="form-group">
-                            <label data-i18n="Modal_CiudadO">Ciudad de Origen *</label>
-                            <input data-i18n="Origen" type="text" class="form-control rounded-pill" required />
-                        </div>
-                        <div class="form-group">
-                            <label data-i18n="Modal_CiudadD">Ciudad de Destino *</label>
-                            <input data-i18n="Destino" type="text" class="form-control rounded-pill" required />
-                        </div>
-
-                        <p class="font-weight-bold mt-4 text-dark" data-i18n="Modal_Carga">¿Tipo de carga?</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="serv1" />
-                            <label class="form-check-label" for="serv1" data-i18n="fletes_foraneos">
-                                Fletes terrestres foráneos contenedores FCL (Contenedor
-                                completo)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="serv2" />
-                            <label class="form-check-label" for="serv2" data-i18n="fletes_local">Fletes terrestres local
-                                contenedores FCL
-                                (Contenedor
-                                completo)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="serv3" />
-                            <label class="form-check-label" for="serv3" data-i18n="fletes_suelta">Fletes terrestres de
-                                carga suelta
-                                (Dedicado)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="serv4" />
-                            <label class="form-check-label" for="serv4" data-i18n="fletes_imo">Fletes carga IMO
-                                (Peligrosa)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="serv5" />
-                            <label class="form-check-label" for="serv5" data-i18n="fletes_sobredimensionada">Fletes
-                                carga sobredimensionada (Equipo especial,
-                                LowBoy, Cama
-                                Baja)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="serv6" />
-                            <label class="form-check-label" for="serv6" data-i18n="almacenaje">Almacenaje y
-                                distribución</label>
-                        </div>
-
-                        <button data-i18n="enviar_whatsapp" type="button"
-                            class="btn btn-warning btn-block rounded-pill font-weight-bold"
-                            onclick="enviarCotizacionWhatsApp()">
-                            Enviar por WhatsApp
-                        </button>
-                    </div>
-                </form>
-            </div>
+            </form>
         </div>
     </div>
+</div>
 
     <!-- Quote Request Start -->
     <div class="container my-5" style="max-width: 600px">
